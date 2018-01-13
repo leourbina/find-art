@@ -24,7 +24,7 @@
 
 
 (defn find-art []
-  (let [start-time (int (/ (System/currentTimeMillis) 1000))]
+  (let [start-time (quot (System/currentTimeMillis) 1000)]
    (loop [time start-time]
      (println "Looking backwards from time" time)
      (if-let [res (get-page time)]
